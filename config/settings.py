@@ -15,12 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-# EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
-# EMAIL_HOST_USER = '8e76cb2c47074c'
-# EMAIL_HOST_PASSWORD = '28c5a3764879e1'
-# EMAIL_PORT = '2525'
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587  
