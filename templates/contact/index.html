@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Get in Touch!</h1>
+        <p>Feel free to drop me a line below!</p>
+        <form method="post" action=".">
+            {% csrf_token %}
+    
+            <!-- {{ form.as_p }} -->
+    
+            {{ form.name }}
+            {{ form.subject}}
+            {{ form.email }}
+            {{ form.content }}
+    
+            <button class="primary-button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
